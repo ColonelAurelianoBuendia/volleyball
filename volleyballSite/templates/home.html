@@ -1,0 +1,6 @@
+{% for match in matches %}
+    <h1>{{match.first_team.name}} VS {{match.second_team.name}}</h1>
+    <p>stadium : {{match.stadium.name}}</p>
+    <a href = "{% url 'buy' match.id %}" > buy ticket </a>
+    <p>----------------------------------------</p>
+{% endfor %}

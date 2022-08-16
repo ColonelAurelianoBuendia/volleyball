@@ -1,15 +1,11 @@
-
-<form action="{% url 'login' %}" method="post">
+<form action="{% url 'register' %}" method="post">
      {% csrf_token %}
+   <label for="name">name:</label>
+  <input type="text" required="required" id="name" name="name"><br><br>
   <label for="username">username:</label>
   <input type="text" required="required" id="username" name="username"><br><br>
   <label for="password">password:</label>
   <input type="text" required="required" id="password" name="password"><br><br>
-  <input type="submit" value="Login">
+  <input type="submit" value="Register">
 </form>
- <form action="{% url 'register' %}" method="post">
-     {% csrf_token %}
-     <input type="submit" value ="Register">
- </form>
-
  {% if error_message %} <p><strong> {{error_message}} </strong></p> {% endif %}
